@@ -32,7 +32,8 @@ var Router = {
     }
 };
 button.addEventListener('click', function(){
-    Router.add("#/yes", window.location.href, "yeee");
-    Router.add("#/no", window.location.href, "noo");
+    var route = Router.add("#/yes", window.location.href, "yeee");
+    window.location.href = route
+    // Router.add("#/no", window.location.href, "noo");
     Router.loader();
 })
