@@ -3,7 +3,7 @@ var serverNameIndex = _location.indexOf('/', _location.indexOf('://') + 3);
 var serverName = _location.substring(0, serverNameIndex) + '/';
 var button = document.querySelector('button');
 var Router = {
-    root: '#/',
+    root: '/',
     routes: [],
     urls: [],
     titles: [],
