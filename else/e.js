@@ -17,7 +17,7 @@ var Router = {
         this.titles.push(theTitle);
     },
 
-    function loading() {
+    loader: function() {
         template = [_location.hash, routes];
         if(template == [-1]){
             _location.hash = root;
@@ -26,5 +26,5 @@ var Router = {
     }
 };
 button.addEventListener('click', function(){
-    loading('#about')
+    loader('#about')
 })
