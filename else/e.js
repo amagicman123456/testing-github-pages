@@ -26,5 +26,5 @@ var Router = {
     }
 };
 button.addEventListener('click', function(){
-    loader('#about')
+    Router.loader('#about')
 })
