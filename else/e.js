@@ -18,7 +18,7 @@ var Router = {
     },
 
     loader: function() {
-        template = [_location.hash, routes];
+        template = [_location.hash, this.routes];
         if(template == [-1]){
             _location.hash = root;
             $("#view").load(urls[0]);
@@ -26,5 +26,6 @@ var Router = {
     }
 };
 button.addEventListener('click', function(){
-    Router.loader('#about')
+    Router.add('#about')
+    Router.loader()
 })
