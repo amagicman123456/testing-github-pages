@@ -1,7 +1,7 @@
 'use strict';
 var button = document.querySelector("button")
 var Router = {
-    root: '/',
+    root: '#/',
     routes: [],
     urls: [],
     titles: [],
@@ -32,7 +32,7 @@ var Router = {
     }
 };
 button.addEventListener('click', function(){
-    Router.add("/yes", window.location.href, "yeee");
-    Router.add("/no", window.location.href, "noo");
+    Router.add("#/yes", window.location.href, "yeee");
+    Router.add("#/no", window.location.href, "noo");
     Router.loader();
 })
