@@ -3,7 +3,7 @@ var serverNameIndex = _location.indexOf('/', _location.indexOf('://') + 3);
 var serverName = _location.substring(0, serverNameIndex) + '/';
 var button = document.querySelector('button');
 var Router = {
-    root: '/',
+    root: '#/',
     routes: [],
     urls: [],
     titles: [],
@@ -25,7 +25,11 @@ var Router = {
         }
     }
 };
+function removeHash(){
+    history.pushState("", document.title, window.location.pathname + window.location.search)
+}
 button.addEventListener('click', function(){
     Router.add('#about')
     Router.loader()
+    removeHash()
 })
